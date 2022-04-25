@@ -36,7 +36,7 @@ else
 fi
 
 for f in *-tool.sh; do
-  required_vars=(tool_github_repo tool_arch install_tool)
+  required_vars=(tool_github_repo tool_arch tool_version install_tool)
   for required_var in "${required_vars[@]}"; do
     unset "$required_var"
   done
@@ -54,7 +54,7 @@ for f in *-tool.sh; do
     exit 1
   done
 
-  release_url="https://api.github.com/repos/${tool_github_repo}/releases/latest"
+  release_url="https://api.github.com/repos/${tool_github_repo}/releases/${tool_version}"
   regex_before='https.*'
   regex_after='[^"]*'
   download_url=`curl -s "$release_url" | grep "browser_download_url" | grep -wo "${regex_before}${tool_arch}${regex_after}" | head -n 1`

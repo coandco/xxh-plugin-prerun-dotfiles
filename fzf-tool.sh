@@ -2,6 +2,7 @@
 
 tool_github_repo="junegunn/fzf"
 tool_arch="linux_amd64"
+tool_version="latest"
 
 install_tool() {
   local downloaded_file="$1"

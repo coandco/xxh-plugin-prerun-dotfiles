@@ -2,6 +2,7 @@
 
 tool_github_repo="so-fancy/diff-so-fancy"
 tool_arch="diff-so-fancy"
+tool_version="latest"
 
 install_tool() {
   local downloaded_file="$1"

@@ -2,6 +2,7 @@
 
 tool_github_repo="BurntSushi/ripgrep"
 tool_arch="x86_64-unknown-linux-musl"
+tool_version="latest"
 
 install_tool() {
   local downloaded_file="$1"
