@@ -64,4 +64,5 @@ for f in *-tool.sh; do
   mkdir -p "$build_dir/home/.local/bin"
   echo "Installing $tool_name..."
   install_tool "$build_dir/$output_filename" "$build_dir/home/.local/bin"
+  rm -f "$build_dir/$output_filename"
 done
