@@ -1,7 +1,7 @@
 #asciinema
 #lolcat
 #pandas
-xonsh[full]
+#xonsh[full]
 
 #Useful xontribs for xonsh
 #-------------------------
