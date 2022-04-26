@@ -26,9 +26,11 @@ if [ -x "$(command -v pip)" ]; then
   
   # Fix python shebang
   pypath=`readlink -f $(which python)`
+  pypath3=`readlink -f $(which python3)`
   if [ -d "$build_dir/home/.local/bin" ]; then
     echo 'Fix PyPi packages shebang'
     sed -i '1s|#!'$pypath'|#!/usr/bin/env python|' $build_dir/home/.local/bin/*
+    sed -i '1s|#!'$pypath3'|#!/usr/bin/env python3|' $build_dir/home/.local/bin/*
   fi
   
 else
